@@ -38,7 +38,7 @@ $youtube_data['author']['uri'] 		//(Url Autor (perfi))
 $youtube_data['category'] 		//categoría asignada
 $youtube_data['published'] 		//(fecha de publicación)
 $youtube_data['updated'] 		//(fecha actualizado)
-$youtube_data['keywords'] 		//(revisar funcione bien)
+$youtube_data['keywords'] 		
 $youtube_data['statistics']['favoriteCount'] 		//(indica el número de usuarios que han añadido un vídeo a su lista de favoritos.) (si no existe regresa null)
 $youtube_data['statistics']['viewCount'] 		//Numero de veces visto (si no existe regresa null)
 $youtube_data['duration'] 		//(duración en segundos)
