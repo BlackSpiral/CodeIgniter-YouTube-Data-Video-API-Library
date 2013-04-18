@@ -39,8 +39,8 @@ $youtube_data['category'] 		//categoría asignada
 $youtube_data['published'] 		//(fecha de publicación)
 $youtube_data['updated'] 		//(fecha actualizado)
 $youtube_data['keywords'] 		//(revisar funcione bien)
-$youtube_data['statistics']['favoriteCount'] 		//(indica el número de usuarios que han añadido un vídeo a su lista de favoritos.)
-$youtube_data['statistics']['viewCount'] 		//Numero de veces visto
+$youtube_data['statistics']['favoriteCount'] 		//(indica el número de usuarios que han añadido un vídeo a su lista de favoritos.) (si no existe regresa null)
+$youtube_data['statistics']['viewCount'] 		//Numero de veces visto (si no existe regresa null)
 $youtube_data['duration'] 		//(duración en segundos)
 $youtube_data['duration_format'] 		//(duración en h:m:s)
 $youtube_data['description'] 		//(regresa null si no hay)
@@ -90,6 +90,7 @@ if($youtube_data = $this->youtube_video->youtube_data($youtube_url)) {
 
 <strong>NOTA Para obtener solo el ID del video sin llamar a la API:</strong>
 <pre>
+	$youtube_url = 'http://www.youtube.com/watch?v=U6Vf4zZiKAA';
 	$this->load->library('youtube_video');
 	echo $this->youtube_video->youtube_id($youtube_url);
 </pre>

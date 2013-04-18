@@ -56,7 +56,12 @@ class Youtube_video
             $youtube_data['published'] = $youtube_xml->published;
             $youtube_data['updated'] =  $youtube_xml->updated;
             $youtube_data['keywords'] = $media->group->keywords;
-            $youtube_data['statistics'] = $yt2->statistics->attributes(); 
+            if($yt2->statistics) {
+                $youtube_data['statistics'] = $yt2->statistics->attributes(); 
+            } else {
+                $youtube_data['statistics'] = null;
+            }
+            
         /*** Asigno duracion y doy formato ***/
             $attrs = $yt->duration->attributes();
             $youtube_data['duration'] = $attrs['seconds'];
