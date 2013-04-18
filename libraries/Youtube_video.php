@@ -65,7 +65,7 @@ class Youtube_video
         /*** Asigno duracion y doy formato ***/
             $attrs = $yt->duration->attributes();
             $youtube_data['duration'] = $attrs['seconds'];
-            $youtube_data['duration_format'] = date("i:s",intval($attrs['seconds']));
+            $youtube_data['duration_format'] = gmdate("H:i:s",intval($attrs['seconds']));
         /*** valido existencia de descripcion ***/
             if ($media->group->description && $media->group->description != '') {
                 $youtube_data['description'] = $media->group->description;
