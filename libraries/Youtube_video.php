@@ -37,7 +37,7 @@ class Youtube_video
         $youtube_id = $this->youtube_id($youtube_url);
         if (isset($youtube_id)) 
         {
-            $data_url = 'http://gdata.youtube.com/feeds/api/videos/sCvhhBySYzE';
+            $data_url = 'http://gdata.youtube.com/feeds/api/videos/'.$youtube_id;
             if($conex= @fopen($data_url,"rt")) {
             $youtube_xml = simplexml_load_file('https://gdata.youtube.com/feeds/api/videos/'.$youtube_id); 
 
